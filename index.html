@@ -1,261 +1,385 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MY PORTFOLIO | WEB Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY PORTFOLIO | WEB Developer</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <div id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
 
-<div id="progressBar"></div>
-<div class="cursor-glow" id="cursorGlow"></div>
-
-<!-- NAVBAR -->
-<nav class="fixed w-full backdrop-blur-md bg-black/30 z-50">
-  <div class="max-w-6xl mx-auto flex justify-between items-center p-6">
-    <a href="#home"><h1 class="text-xl font-bold text-indigo-400">Praise</h1></a>
-    <!-- <h1 class="text-xl font-bold text-indigo-400">Praise</h1> -->
-    <div class="space-x-6 hidden md:block">
-      <a href="#about" class="hover:text-indigo-400">About</a>
-      <a href="#projects" class="hover:text-indigo-400">Projects</a>
-      <a href="#contact" class="hover:text-indigo-400">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="min-h-screen flex items-center relative" id="home">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
-
-    <div class="reveal">
-      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-        Hi, I'm <span class="text-indigo-400">Kenneth Praise</span>
-      </h1>
-
-      <h2 class="text-2xl mt-4 text-gray-300">
-        <span id="typing"></span>
-      </h2>
-
-      <div class="mt-8 space-x-4">
-        <a href="#projects" class="btn-hover bg-indigo-500 px-6 py-3 rounded-full font-semibold">
-          View Work
-        </a>
-        <a href="#contact" class="btn-hover border border-indigo-500 px-6 py-3 rounded-full">
-          Hire Me
-        </a>
+    <!-- NAVBAR -->
+    <nav class="fixed w-full backdrop-blur-md bg-black/30 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-6">
+        <a href="#home"
+          ><h1 class="text-xl font-bold text-indigo-400">Praise</h1></a
+        >
+        <!-- <h1 class="text-xl font-bold text-indigo-400">Praise</h1> -->
+        <div class="space-x-6 hidden md:block">
+          <a href="#about" class="hover:text-indigo-400">About</a>
+          <a href="#projects" class="hover:text-indigo-400">Projects</a>
+          <a href="#contact" class="hover:text-indigo-400">Contact</a>
+        </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="flex justify-center reveal">
-      <div class="relative">
-        <div class="w-72 h-72 bg-indigo-500/20 rounded-full absolute -z-10"></div>
-        <img src="image/pic 1.jpeg"
-             class="float rounded-full w-64 h-64 object-cover shadow-2xl">
-      </div>
-    </div>
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center relative" id="home">
+      <div
+        class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center"
+      >
+        <div class="reveal">
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+            Hi, I'm <span class="text-indigo-400">Kenneth Praise</span>
+          </h1>
 
-  </div>
-</section>
+          <h2 class="text-2xl mt-4 text-gray-300">
+            <span id="typing"></span>
+          </h2>
 
-<!-- ABOUT -->
-<section id="about" class="py-24">
-  <div class="max-w-5xl mx-auto px-6 text-center reveal">
-    <h2 class="text-4xl font-bold text-indigo-400">About Me</h2>
-    <p class="mt-6 text-gray-400 leading-relaxed">
-      “Hi, I’m Praise, a full-stack developer passionate about building web applications. 
-      I started coding in 2024 and am continuously learning and improving my skills in both front-end and back-end development. I love turning ideas into functional, user-friendly digital experiences and am excited to share my projects here.”
-    </p>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-24 bg-slate-900">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-indigo-400 text-center reveal">Projects</h2>
-
-    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-
-      <!-- Project One -->
-      <div class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800">
-        <div class="overflow-hidden relative group">
-          <img src="image/p 1.png" alt="Project One Screenshot" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-          <!-- Overlay on hover -->
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500">
-            <h3 class="text-white text-xl font-semibold">Project One</h3>
+          <div class="mt-8 space-x-4">
+            <a
+              href="#projects"
+              class="btn-hover bg-indigo-500 px-6 py-3 rounded-full font-semibold"
+            >
+              View Work
+            </a>
+            <a
+              href="#contact"
+              class="btn-hover border border-indigo-500 px-6 py-3 rounded-full"
+            >
+              Hire Me
+            </a>
           </div>
         </div>
-        <div class="p-6">
-          <p class="text-gray-400 mt-2">Portfolio website design.</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="https://your-live-project1.com" target="_blank"
-               class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition">
-              Live Project
-            </a>
-            <a href="https://github.com/your-username/project-one" target="_blank"
-               class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition">
-              GitHub Repo
-            </a>
+
+        <div class="flex justify-center reveal">
+          <div class="relative">
+            <div
+              class="w-72 h-72 bg-indigo-500/20 rounded-full absolute -z-10"
+            ></div>
+            <img
+              src="image/pic 1.jpeg"
+              class="float rounded-full w-64 h-64 object-cover shadow-2xl"
+            />
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Project Two -->
-      <div class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800">
-        <div class="overflow-hidden relative group">
-          <img src="image/p 2.png" alt="Project Two Screenshot" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500">
-            <h3 class="text-white text-xl font-semibold">Project Two</h3>
+    <!-- ABOUT -->
+    <section id="about" class="py-24">
+      <div class="max-w-5xl mx-auto px-6 text-center reveal">
+        <h2 class="text-4xl font-bold text-indigo-400">About Me</h2>
+        <p class="mt-6 text-gray-400 leading-relaxed">
+          “Hi, I’m Praise, a full-stack developer passionate about building web
+          applications. I started coding in 2024 and am continuously learning
+          and improving my skills in both front-end and back-end development. I
+          love turning ideas into functional, user-friendly digital experiences
+          and am excited to share my projects here.”
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 bg-slate-900">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-indigo-400 text-center reveal">
+          Projects
+        </h2>
+
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+        >
+          <!-- Project One -->
+          <div
+            class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800"
+          >
+            <div class="overflow-hidden relative group">
+              <img
+                src="image/p 1.png"
+                alt="Project One Screenshot"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <!-- Overlay on hover -->
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+              >
+                <h3 class="text-white text-xl font-semibold">Project One</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mt-2">Portfolio website design.</p>
+              <div class="mt-4 flex space-x-4">
+                <a
+                  href="https://kennethpraiseportfolio.netlify.app"
+                  target="_blank"
+                  class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition"
+                >
+                  Live Project
+                </a>
+                <a
+                  href="https://github.com/truthful20/New-Portfolio
+"
+                  target="_blank"
+                  class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition"
+                >
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="p-6">
-          <p class="text-gray-400 mt-2">Fast food restaurant website.</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="https://fastfoodwebsitep4.netlify.app" target="_blank"
-               class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition">
-              Live Project
-            </a>
-            <a href="https://github.com/truthful20/project-4-food-delivery-website" target="_blank"
-               class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition">
-              GitHub Repo
-            </a>
+
+          <!-- Project Two -->
+          <div
+            class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800"
+          >
+            <div class="overflow-hidden relative group">
+              <img
+                src="image/p 2.png"
+                alt="Project Two Screenshot"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+              >
+                <h3 class="text-white text-xl font-semibold">Project Two</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mt-2">Fast food restaurant website.</p>
+              <div class="mt-4 flex space-x-4">
+                <a
+                  href="https://fastfoodwebsitep4.netlify.app"
+                  target="_blank"
+                  class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition"
+                >
+                  Live Project
+                </a>
+                <a
+                  href="https://github.com/truthful20/project-4-food-delivery-website"
+                  target="_blank"
+                  class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition"
+                >
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Three -->
+          <div
+            class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800"
+          >
+            <div class="overflow-hidden relative group">
+              <img
+                src="image/p3.png"
+                alt="Project Three Screenshot"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+              >
+                <h3 class="text-white text-xl font-semibold">Project Three</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mt-2">Gym website.</p>
+              <div class="mt-4 flex space-x-4">
+                <a
+                  href="https://powerpulsefitnesswebsite.netlify.app"
+                  target="_blank"
+                  class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition"
+                >
+                  Live Project
+                </a>
+                <a
+                  href="https://github.com/truthful20/Powerpulse"
+                  target="_blank"
+                  class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition"
+                >
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Four -->
+          <div
+            class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800"
+          >
+            <div class="overflow-hidden relative group">
+              <img
+                src="image/p 4.png"
+                alt="Project Four Screenshot"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+              >
+                <h3 class="text-white text-xl font-semibold">Project Four</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mt-2">Student Registration Form.</p>
+              <div class="mt-4 flex space-x-4">
+                <a
+                  href="https://studentregistrationformsrs.netlify.app"
+                  target="_blank"
+                  class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition"
+                >
+                  Live Project
+                </a>
+                <a
+                  href="https://github.com/truthful20/project-2-SRS-"
+                  target="_blank"
+                  class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition"
+                >
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Five -->
+          <div
+            class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800"
+          >
+            <div class="overflow-hidden relative group">
+              <img
+                src="image/p 5.png"
+                alt="Project Five Screenshot"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+              >
+                <h3 class="text-white text-xl font-semibold">Project Five</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mt-2">To-do list APP</p>
+              <div class="mt-4 flex space-x-4">
+                <a
+                  href="https://applicationto-do-list.netlify.app/"
+                  target="_blank"
+                  class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition"
+                >
+                  Live Project
+                </a>
+                <a
+                  href="https://github.com/truthful20/To-do--list"
+                  target="_blank"
+                  class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition"
+                >
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Six -->
+          <div
+            class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800"
+          >
+            <div class="overflow-hidden relative group">
+              <img
+                src="image/p4.png"
+                alt="Project Six Screenshot"
+                class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500"
+              >
+                <h3 class="text-white text-xl font-semibold">Project Six</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-400 mt-2">Zoe fastFood Resturant.</p>
+              <div class="mt-4 flex space-x-4">
+                <a
+                  href="https://fastfoodw.netlify.app/"
+                  target="_blank"
+                  class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition"
+                >
+                  Live Project
+                </a>
+                <a
+                  href="https://github.com/truthful20/fastfood"
+                  target="_blank"
+                  class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition"
+                >
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Project Three -->
-      <div class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800">
-        <div class="overflow-hidden relative group">
-          <img src="image/p3.png" alt="Project Three Screenshot" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500">
-            <h3 class="text-white text-xl font-semibold">Project Three</h3>
-          </div>
-        </div>
-        <div class="p-6">
-          <p class="text-gray-400 mt-2">Gym website.</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="https://powerpulsefitnesswebsite.netlify.app" target="_blank"
-               class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition">
-              Live Project
-            </a>
-            <a href="https://github.com/truthful20/Powerpulse" target="_blank"
-               class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition">
-              GitHub Repo
-            </a>
-          </div>
-        </div>
+    <!-- CONTACT -->
+    <section id="contact" class="py-24">
+      <div class="max-w-xl mx-auto text-center px-6 reveal">
+        <h2 class="text-4xl font-bold text-indigo-400">Let's Work Together</h2>
+
+        <form
+          action="https://formspree.io/f/xgolzkdo"
+          method="POST"
+          class="mt-10 space-y-4"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700"
+            required
+          />
+
+          <textarea
+            name="message"
+            placeholder="Message"
+            class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="btn-hover bg-indigo-500 px-6 py-3 rounded-full font-semibold text-white"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
+    </section>
 
-      <!-- Project Four -->
-      <div class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800">
-        <div class="overflow-hidden relative group">
-          <img src="image/p 4.png" alt="Project Four Screenshot" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500">
-            <h3 class="text-white text-xl font-semibold">Project Four</h3>
-          </div>
-        </div>
-        <div class="p-6">
-          <p class="text-gray-400 mt-2">Student Registration Form.</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="https://studentregistrationformsrs.netlify.app" target="_blank"
-               class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition">
-              Live Project
-            </a>
-            <a href="https://github.com/truthful20/project-2-SRS-" target="_blank"
-               class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition">
-              GitHub Repo
-            </a>
-          </div>
-        </div>
-      </div>
+    <footer class="py-6 text-center text-gray-500">
+      © 2026 Kenneth Praise. All Rights Reserved.
+    </footer>
 
-      <!-- Project Five -->
-      <div class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800">
-        <div class="overflow-hidden relative group">
-          <img src="image/p 5.png" alt="Project Five Screenshot" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500">
-            <h3 class="text-white text-xl font-semibold">Project Five</h3>
-          </div>
-        </div>
-        <div class="p-6">
-          <p class="text-gray-400 mt-2">To-do list APP</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="https://applicationto-do-list.netlify.app/" target="_blank"
-               class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition">
-              Live Project
-            </a>
-            <a href="https://github.com/truthful20/To-do--list" target="_blank"
-               class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition">
-              GitHub Repo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Six -->
-      <div class="reveal rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 relative bg-slate-800">
-        <div class="overflow-hidden relative group">
-          <img src="image/p4.png" alt="Project Six Screenshot" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-500">
-            <h3 class="text-white text-xl font-semibold">Project Six</h3>
-          </div>
-        </div>
-        <div class="p-6">
-          <p class="text-gray-400 mt-2">Zoe fastFood Resturant.</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="https://fastfoodw.netlify.app/" target="_blank"
-               class="bg-indigo-500 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-indigo-600 transition">
-              Live Project
-            </a>
-            <a href="https://github.com/truthful20/fastfood" target="_blank"
-               class="bg-gray-700 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-gray-600 transition">
-              GitHub Repo
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-24">
-  <div class="max-w-xl mx-auto text-center px-6 reveal">
-    <h2 class="text-4xl font-bold text-indigo-400">Let's Work Together</h2>
-
-    <form action="https://formspree.io/f/xgolzkdo" method="POST" class="mt-10 space-y-4">
-  <input type="text" name="name" placeholder="Your Name"
-         class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700" required>
-
-  <input type="email" name="email" placeholder="Your Email"
-         class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700" required>
-
-  <textarea name="message" placeholder="Message"
-            class="w-full p-4 rounded-lg bg-slate-800 border border-slate-700" required></textarea>
-
-  <button type="submit" class="btn-hover bg-indigo-500 px-6 py-3 rounded-full font-semibold text-white">
-    Send Message
-  </button>
-</form>
-
-  </div>
-</section>
-
-<footer class="py-6 text-center text-gray-500">
-  © 2026 Your Name. All Rights Reserved.
-</footer>
-
-<!-- External JS -->
-<script src="script.js"></script>
-</body>
+    <!-- External JS -->
+    <script src="script.js"></script>
+  </body>
 </html>
