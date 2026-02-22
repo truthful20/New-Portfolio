@@ -1,0 +1,58 @@
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background: #0f172a;
+  color: white;
+}
+
+/* Scroll Progress Bar */
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #6366f1;
+  width: 0%;
+  z-index: 9999;
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Cursor Glow */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Button hover */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+.btn-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 25px rgba(99,102,241,0.3);
+}
